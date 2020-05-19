@@ -26,9 +26,9 @@ public class FindText {
        // pattern = Pattern.compile("\\bto\\b");
          //pattern = Pattern.compile("class=\"line\"");
         // pattern = Pattern.compile("\\{.*?\\}");
-        // pattern = Pattern.compile("^<[p|d]");
+         pattern = Pattern.compile("^<[p|d]");
 		
-		pattern = Pattern.compile("^</.*?>$");
+		//pattern = Pattern.compile("^</.*?>$");
 		
 		try {
 			
