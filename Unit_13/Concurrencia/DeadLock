@@ -1,0 +1,30 @@
+En general se pueden identificar los siguientes requisitos para un  deadlock:
+
+
+* Exclusión mutua: hay un recurso al que sólo se puede acceder por un hilo en cualquier momento.
+* Retención de recurso: Mientras tiene bloqueado un recurso, el hilo intenta adquirir otro bloqueo en algun otro recurso exclusivo.
+* No hay prelación: no hay ningun mecanismo que libere el recurso si uno de los hilos mantiene el bloqueo durante un periodo de tiempo especificado.
+* Espera circualar: Durante el tiempo de ejecuciónb se produce una constelación en la que dos (o mas) hilos estan cada uno esperando en el otro hilo 
+para liberar un recurso que ha bloqueado
+
+
+Aunque la lista de requisitos parece larga, no es raro que las aplicaciones multihilo más avanzadas tengan problemas de bloqueo.
+ Pero puede tratar de evitar los bloqueos si es capaz de relajar uno de los requisitos mencionados anteriormente
+ 
+* Exclusión mutua: Este es un requisito que a menudo no se puede relajar, ya que el recurso tiene que ser utilizado exclusivamente. 
+  Pero no siempre debe ser así. Cuando se utilizan sistemas de DBMS, una posible solución en lugar de utilizar un bloqueo pesimista
+  en alguna fila de la tabla que tiene que ser actualizada, se puede utilizar una técnica llamada Optimistic Locking.
+  
+* Una posible solución para eludir la retención de recursos mientras se espera otro recurso exclusivo es bloquear todos los recursos 
+  necesarios al principio del algoritmo y liberar todos los recursos si no es posible obtener todos los bloqueos. 
+  Esto, por supuesto, no siempre es posible, tal vez los recursos a bloquear no se conocen de antemano o es sólo como un desperdicio de recursos.
+ 
+* Si no se puede obtener el bloqueo inmediatamente, una posible solución para evitar un posible bloqueo es la introducción de un tiempo de espera.  
+  la clase de SDK ReentrantLock por ejemplo, ofrece la posibilidad de especificar un tiempo de espera para el bloqueo.
+  
+ En aplicaciones más avanzadas puede incluso considerar la implementación de un sistema de detección de bloqueo. 
+ Aquí usted tendría para implementar algún tipo de monitoreo de los hilos, donde cada hilo reporta la adquisición exitosa de un candado y su intento de
+obtener una cerradura. Si los hilos y los bloqueos se modelan como un gráfico dirigido, se puede detectar cuando dos hilos diferentes están 
+sosteniendo mientras que simultáneamente solicita otro recurso bloqueado. Si entonces pudieras forzar los hilos de bloqueo a 
+liberar un recurso obtenido que es capaz de resolver situaciones de bloqueo de forma automática
+
