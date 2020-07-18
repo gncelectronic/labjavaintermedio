@@ -20,11 +20,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  *   
  *   Semaphore(int permits, boolean fair)
  *   
- *   Para ilustrar el comportamiento descrito, vamos a configurar un simple grupo de hilos con cinco hilos pero controlando a través de un semáforo que en cada punto en 
+ *   Para ilustrar el comportamiento descrito, vamos a configurar un simple grupo de hilos con cinco hilos pero controlando a través de un semáforo en que cada punto en 
  *   el tiempo no más de tres de ellos están corriendo.
  *   
- *   Para asegurarnos de no tener mas de tres hilos concurrentes dentro de la sección critica, usamos un AtomicInteger que se incrementa cada vez 	que  un procerso ingresa en la sección y se 
- *   decrementa antes de salir de la sección. Cuando el contador tiene un valor  mayo que 4 , un IllegalSateException es lanzado. Finalmente  liberamos el semaforo y otro hilo espera para 
+ *   Para asegurarnos de no tener mas de tres hilos concurrentes dentro de la sección critica, usamos un AtomicInteger que se incrementa cada vez 	que  un proceso ingresa en la sección y se 
+ *   decrementa antes de salir de la sección. Cuando el contador tiene un valor  mayor que 4 , un IllegalSateException es lanzado. Finalmente  liberamos el semaforo y otro hilo espera para 
  *   ingresar a la sección critica.
  * @author Gaston
  *
