@@ -1,0 +1,9 @@
+java.sql.SQLException: No suitable driver found for localhost:1527:testdb
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.apache.derby.tools.dblook.go(Unknown Source)
+	at org.apache.derby.tools.dblook.<init>(Unknown Source)
+	at org.apache.derby.tools.dblook.main(Unknown Source)
+	at org.apache.derby.iapi.tools.run.main(Unknown Source)
+-- **--> DEBUG: No suitable driver found for localhost:1527:testdb
+

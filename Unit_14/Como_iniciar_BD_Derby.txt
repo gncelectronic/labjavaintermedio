@@ -1,0 +1,10 @@
+1)En una consola levantar el motor de BD que escucha en el puerto TCP 1527
+..\db-derby-10.14.2.0-bin\lib>java -jar derbyrun.jar server start
+
+2)En otra consola ingresar a la consola de la base de datos usando el programa ij
+..\db-derby-10.14.2.0-bin\lib>java -jar derbyrun.jar ij
+
+3) Crear la conexion a la base de datos y en caso que no exista crearla 
+ij> connect 'jdbc:derby://localhost:1527/empleadosdb;create=true';
+2)Crear la tabla empleados
+ij> create table empleados(legajo integer, nombre varchar(100) not null, apellido varchar(100) not null, fecha_nac date not null, salario float not null, primary key(legajo));

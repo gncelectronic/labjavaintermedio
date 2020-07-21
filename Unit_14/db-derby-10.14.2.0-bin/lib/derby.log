@@ -1,0 +1,14 @@
+Mon Jul 20 21:49:45 ART 2020 : Servidor de red Apache Derby: Se ha iniciado 10.14.2.0 - (1828579) y está listo para aceptar las conexiones en el puerto 1527
+----------------------------------------------------------------
+Mon Jul 20 21:53:28 ART 2020:
+ Iniciando instancia a816c00e-0173-6ed9-0c10-ffffc82328e5 de Derby, versión The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): 
+en el directorio de base de datos E:\UTN\Proydesa\Java Intermedio\Laboratorios\Unit_14\db-derby-10.14.2.0-bin\lib\empleadosdb3 con el cargador de clases sun.misc.Launcher$AppClassLoader@55f96302
+Cargado desde file:/E:/UTN/Proydesa/Java%20Intermedio/Laboratorios/Unit_14/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_251-b08
+user.dir=E:\UTN\Proydesa\Java Intermedio\Laboratorios\Unit_14\db-derby-10.14.2.0-bin\lib
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=E:\UTN\Proydesa\Java Intermedio\Laboratorios\Unit_14\db-derby-10.14.2.0-bin\lib
+Cargador de clases de base de datos iniciado - derby.database.classpath=''
